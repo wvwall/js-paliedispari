@@ -32,6 +32,7 @@ switch (pariDispari) {
     break;
     case "d":
         console.log("Hai scelto dispari");
+    break;
     default:
         console.log("Non hai inserito quanto richiesto!");
     break;
