@@ -64,11 +64,11 @@ function risultato() {
     if (sommaNum%2 == 0) {
         sommaNum = "p";
         console.log(sommaNum);
-        console.log("il numero è pari!");
+        console.log("La somma è pari!");
     }else {
         sommaNum = "d";
         console.log(sommaNum);
-        console.log("il numero è dispari!");
+        console.log("La somma è dispari!");
     }
     if (sommaNum === pariDispari) {
         console.log("Hai vinto");
