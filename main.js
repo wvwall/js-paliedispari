@@ -5,6 +5,7 @@ function reverse() {
 
     var parola = prompt("Inserisci una parola: ");
     console.log(parola);
+    document.getElementById("user").innerHTML = "Il tuo nickname è : " + parola ;
     var parolArr = parola.split("");
     console.log(parolArr);
     var arrRev = parolArr.reverse("");
@@ -14,9 +15,11 @@ function reverse() {
 
     // controlla se la parola è palindroma
     if (parola === parolaReverse) {
-        console.log("Questa parola è palindroma!");    
+        console.log("Questa parola è palindroma!"); 
+        document.getElementById("pali").innerHTML = "La tua parola è palindroma!"  
     } else {
         console.log("Questa parola non è palindroma");
+        document.getElementById("pali").innerHTML = "La tua parola non è palindroma!"
     }
 }
 reverse();
@@ -28,13 +31,16 @@ reverse();
 var pariDispari = prompt("p=pari, d=dispari: ");
 switch (pariDispari) {
     case "p":
-      console.log("Hai scelto pari.");  
+      console.log("Hai scelto pari.");
+      document.getElementById("scelta").innerHTML =  "Hai scelto pari"
     break;
     case "d":
         console.log("Hai scelto dispari");
+        document.getElementById("scelta").innerHTML = "Hai scelto dispari"
     break;
     default:
         console.log("Non hai inserito quanto richiesto!");
+        document.getElementById("scelta").innerHTML = "Non hai inserito quanto richiesto"
     break;
 }
 
@@ -63,17 +69,19 @@ console.log(sommaNum);
 function risultato() {
     if (sommaNum%2 == 0) {
         sommaNum = "p";
-        console.log(sommaNum);
         console.log("La somma è pari!");
+        document.getElementById("somma").innerHTML = "La somma del tuo numero con quello del computer da un numero pari."
     }else {
         sommaNum = "d";
-        console.log(sommaNum);
         console.log("La somma è dispari!");
+        document.getElementById("somma").innerHTML = "La somma del tuo numero con quello del computer da un numero dispari."
     }
     if (sommaNum === pariDispari) {
         console.log("Hai vinto");
+        document.getElementById("risultato").innerHTML = "Hai vinto!"
     } else {
         console.log("Hai perso!");
+        document.getElementById("risultato").innerHTML = "Hai perso!"
     }
 }
 risultato();
